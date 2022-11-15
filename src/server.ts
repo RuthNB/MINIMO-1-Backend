@@ -5,7 +5,8 @@ import cors from "cors";
 import User from "./api/User";
 import Booking from "./api/Booking";
 import Route from "./api/Route";
-
+import Vehicle from "./api/Vehicle";
+import Gestor from "./api/Gestor";
 
 const app = express();
 const port = process.env.PORT || 5432;
@@ -19,6 +20,8 @@ app.use(cors());
 app.use('/api/users', User)
 app.use('/api/bookings', Booking)
 app.use('/api/routes', Route)
+app.use('/api/vehicles', Vehicle)
+app.use('/api/gestors', Gestor)
 
 // Idle
 app.get('/', ( req: express.Request, res: express.Response ) => {
